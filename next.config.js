@@ -8,8 +8,8 @@ module.exports = {
       test: /\.js$/,
       exclude: /node_modules/,
       use: [
+        { loader: GriffelCSSExtractPlugin.loader },
         { loader: "@griffel/webpack-loader" },
-        { loader: GriffelCSSExtractPlugin.loader }
       ]
     });
     config.plugins.push(new GriffelCSSExtractPlugin());
