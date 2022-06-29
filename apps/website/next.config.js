@@ -36,18 +36,18 @@ const nextConfig = {
       },
       // "css-loader" is required to handle produced CSS assets by Griffel
       // you can use "style-loader" or "MiniCssExtractPlugin.loader" to handle CSS insertion
-      {
-        test: /\.css$/,
-        use: [MiniCssExtractPlugin.loader, 'css-loader'],
-      },
+      // {
+      //   test: /\.css$/,
+      //   use: [MiniCssExtractPlugin.loader, 'css-loader'],
+      // },
     );
     config.plugins.push(
-      new MiniCssExtractPlugin({
-        // without these Next.js will look for the generated stylesheets from the wrong place
-        filename: "static/chunks/[chunkhash].css",
-        chunkFilename: "static/chunks/[chunkhash].css",
-        ignoreOrder: true,
-      }),
+      // new MiniCssExtractPlugin({
+      //   // without these Next.js will look for the generated stylesheets from the wrong place
+      //   filename: "static/chunks/[chunkhash].css",
+      //   chunkFilename: "static/chunks/[chunkhash].css",
+      //   ignoreOrder: true,
+      // }),
       new GriffelCSSExtractionPlugin()
     );
 
